@@ -20,13 +20,7 @@ from matplotlib import pyplot
 ###
 INDEX_COVERAGE = 0
 INDEX_CHANGE = 1
-###
-# End global variables
-###
 
-###
-# Global variables
-###
 """ Class I (retrotransposons)"""
 TE_RXX = [int(0), False]
 """ Order LTR """
@@ -111,6 +105,11 @@ TE_DMM = [int(0), False]
 
 """ SSRs"""
 TE_SSR = [int(0), False]
+
+###
+# End global variables
+###
+
 
 ###
 # Utility functions
