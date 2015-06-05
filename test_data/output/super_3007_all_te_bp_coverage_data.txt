@@ -1,0 +1,42 @@
+Class, Order, Superfamily, # of bp covered
+Class I (retrotransposons),,, 2647
+,Order LTR,, 0
+,,Superfamily Copia, 0
+,,Superfamily Gypsy, 0
+,,Superfamily Bel-Pao, 0
+,,Superfamily Retrovirus, 0
+,,Superfamily ERV, 0
+,Order DIRS,, 0
+,,Superfamily DIRS, 0
+,,Superfamily Ngaro, 0
+,,Superfamily VIPER, 0
+,Order PLE,, 0
+,,Superfamily Penelope, 0
+,Order LINE,, 0
+,,Superfamily R2, 0
+,,Superfamily RTE, 0
+,,Superfamily Jockey, 0
+,,Superfamily L1, 0
+,,Superfamily I, 0
+,Order SINE,, 0
+,,Superfamily tRNA, 0
+,,Superfamily 7SL, 0
+,,Superfamily 5S, 0
+Class II (DNA transposons),,, 204
+,Subclass I: Order TIR,, 204
+,,Superfamily Tc1-Mariner, 0
+,,Superfamily hAT, 0
+,,Superfamily Mutator, 0
+,,Superfamily Merlin, 0
+,,Superfamily Transib, 0
+,,Superfamily P, 0
+,,Superfamily PiggyBac, 204
+,,Superfamily PIF-Harbinger, 0
+,,Superfamily CACTA, 0
+,Subclass I: Order Crypton,, 0
+,,Superfamily Crypton, 0
+,Subclass I: Order Helitron,, 0
+,,Superfamily Helitron, 0
+,Subclass I: Order Maverick,, 0
+,,Superfamily Maverick, 0
+SSRs,,, 11

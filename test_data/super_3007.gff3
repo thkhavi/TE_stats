@@ -1,0 +1,9 @@
+##gff-version 3
+##sequence-region super_3007 1 2648
+super_3007	sbi1_REPET_TEs	match	2	2648	0.0	-	.	ID=ms531420_super_3007_RXX-LARD_sbi1_chr1-L-B446-Map1;Target=RXX-LARD_sbi1_chr1-L-B446-Map1+4709+7444;TargetLength=9435
+super_3007	sbi1_REPET_TEs	match_part	2	1455	0.0	-	.	ID=mp531420-1_super_3007_RXX-LARD_sbi1_chr1-L-B446-Map1;Parent=ms531420_super_3007_RXX-LARD_sbi1_chr1-L-B446-Map1;Target=RXX-LARD_sbi1_chr1-L-B446-Map1+5992+7444;Identity=99.5
+super_3007	sbi1_REPET_TEs	match_part	1575	2648	0.0	-	.	ID=mp531420-2_super_3007_RXX-LARD_sbi1_chr1-L-B446-Map1;Parent=ms531420_super_3007_RXX-LARD_sbi1_chr1-L-B446-Map1;Target=RXX-LARD_sbi1_chr1-L-B446-Map1+4709+5781;Identity=99.5
+super_3007	sbi1_REPET_SSRs	match	159	169	0.0	+	.	ID=ms7130448_super_3007_CCCTG2;Target=CCCTG2+1+11
+super_3007	sbi1_REPET_tblastx	match	1138	1341	0.0	+	.	ID=ms917566_super_3007_piggyBac-4_BF:ClassII:TIR:PiggyBac;Target=piggyBac-4_BF:ClassII:TIR:PiggyBac+3455+3653;TargetLength=9533
+super_3007	sbi1_REPET_tblastx	match_part	1138	1226	1e-17	+	.	ID=mp917566-1_super_3007_piggyBac-4_BF:ClassII:TIR:PiggyBac;Parent=ms917566_super_3007_piggyBac-4_BF:ClassII:TIR:PiggyBac;Target=piggyBac-4_BF:ClassII:TIR:PiggyBac+3455+3543;Identity=83.654
+super_3007	sbi1_REPET_tblastx	match_part	1231	1341	1e-17	+	.	ID=mp917566-2_super_3007_piggyBac-4_BF:ClassII:TIR:PiggyBac;Parent=ms917566_super_3007_piggyBac-4_BF:ClassII:TIR:PiggyBac;Target=piggyBac-4_BF:ClassII:TIR:PiggyBac+3543+3653;Identity=62.5017
