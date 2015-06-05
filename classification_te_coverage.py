@@ -8,7 +8,7 @@
 #	(Wicker et al., 2007).
 #
 # Example use:
-# python classification_te_coverage.py ../super_1883.gff3
+# python classification_te_coverage.py ./test_data/chromosome_2.gff3
 
 import sys
 import HTSeq
@@ -119,7 +119,7 @@ def usage():
                        \n\t(1) path to GFF3 file for contig of interest\
                        \n\t(2) length of contig (bp)\
                        \nExample usage:\
-                       \n\tpython classification_te_coverage.py ../super_1883.gff3 \n\n")
+                       \n\tpython classification_te_coverage.py ./test_data/chromosome_2.gff3 \n\n")
      sys.stderr.flush()
      sys.exit()
 
