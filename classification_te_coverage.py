@@ -8,12 +8,11 @@
 #	(Wicker et al., 2007).
 #
 # Example use:
-# python classification_te_coverage.py ./test_data/chromosome_2.gff3
+# python classification_te_coverage.py ./test_data/chromosome_2.gff3 sbi1
 
 import sys
 import HTSeq
 import itertools
-from matplotlib import pyplot
 
 ###
 # Global variables
@@ -117,9 +116,9 @@ TE_SSR = [int(0), False]
 def usage():
      sys.stderr.write("\nclassification_te_coverage.py expects\
                        \n\t(1) path to GFF3 file for contig of interest\
-                       \n\t(2) length of contig (bp)\
+                       \n\t(2) TEannot project_name (from TEannot.cfg)\
                        \nExample usage:\
-                       \n\tpython classification_te_coverage.py ./test_data/chromosome_2.gff3 \n\n")
+                       \n\tpython classification_te_coverage.py ./test_data/chromosome_2.gff3 sbi1\n\n")
      sys.stderr.flush()
      sys.exit()
 
@@ -131,7 +130,7 @@ def usage():
 ###
 # Begin main()
 ###
-if len(sys.argv) <= 1:
+if len(sys.argv) <= 2:
      usage()
 if sys.argv[1] == "--help" or sys.argv[1] == "-h":
      usage()
@@ -142,7 +141,8 @@ try:
      NUMBER_TE = len([line.strip() for line in open(sys.argv[1])]) - 2
      CONTIG_ID = ((sys.argv[1].split(".gff3"))[0]).split("/")[-1]
      LILI_TABLE = [line.strip() for line in open(sys.argv[1])]
-     CONTIG_LENGTH = int(LILI_TABLE[1].split(" ")[-1]) 
+     CONTIG_LENGTH = int(LILI_TABLE[1].split(" ")[-1])
+     PROJECT_NAME = sys.argv[2]
 except IOError:
      sys.stderr.write("\nCannot open target gff3 file. Please check your input:\n")
      usage()
@@ -151,11 +151,11 @@ except IOError:
 print("Populating genomic array of sets.")
 GAS = HTSeq.GenomicArrayOfSets( [CONTIG_ID], stranded=False )
 for t_element in itertools.islice(GFF3_FILE,0,None):
-   if t_element.source == "sbi1_REPET_TEs":
+   if t_element.source == PROJECT_NAME + "_REPET_TEs":
       GAS[t_element.iv] += "TE@" + (t_element.attr['Target'])[:3]
-   elif t_element.source == "sbi1_REPET_tblastx" or t_element.source == "sbi1_REPET_blastx":
+   elif t_element.source == PROJECT_NAME + "_REPET_tblastx" or t_element.source == PROJECT_NAME + "_REPET_blastx":
       GAS[t_element.iv] += "blast@" + t_element.attr['ID']
-   elif t_element.source == "sbi1_REPET_SSRs":
+   elif t_element.source == PROJECT_NAME + "_REPET_SSRs":
       GAS[t_element.iv] += "SSR@" + t_element.attr['ID']
 print("Finished populating genomic array of sets.")
 
@@ -670,3 +670,4 @@ with open(ALL_TE_BP_COVERAGE_DATA_FILE_NAME, 'w') as FILE:
 ###
 # End main()
 ###
+

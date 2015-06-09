@@ -7,6 +7,6 @@ Dependencies:
 
 Example Usage:
 ~~~~~~~~~~~~~~
-$ python classification_te_coverage.py ./test_data/super_3007.gff3
+$ python classification_te_coverage.py ./test_data/super_3007.gff3 sbi1
 ~~~~~~~~~~~~~
-This should write a comma separated file, "super_3007_all_te_bp_coverage_data.txt", to the current working directory.
+"sbi1" is the project_name from TEannot.cfg. This should write a comma separated file, "super_3007_all_te_bp_coverage_data.txt", to the current working directory.
